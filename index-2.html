@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Warehouse OS</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Warehouse command center</p>
+          <h1>Smart Warehouse OS</h1>
+        </div>
+        <div class="status-pill" id="systemStatus">System online</div>
+      </header>
+
+      <section class="kpis" id="kpis"></section>
+
+      <main class="main-grid">
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Inventory overview</h2>
+            <button id="refreshInventory">Refresh</button>
+          </div>
+          <div id="inventoryList" class="inventory-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Low-stock alerts</h2>
+            <button id="createDemoOrder">Create demo order</button>
+          </div>
+          <div id="alertList" class="alert-list"></div>
+        </section>
+      </main>
+
+      <section class="panel full-width">
+        <div class="panel-header">
+          <h2>Order fulfillment queue</h2>
+        </div>
+        <div id="ordersList" class="orders-list"></div>
+      </section>
+
+      <section class="panel full-width">
+        <div class="panel-header">
+          <h2>Dispatch board</h2>
+        </div>
+        <div id="dispatchList" class="dispatch-list"></div>
+      </section>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
